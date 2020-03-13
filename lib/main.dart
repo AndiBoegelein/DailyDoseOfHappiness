@@ -55,9 +55,16 @@ class HappinessState extends State<Happiness> {
     final List<Image> puppyImages = <Image>[];
     final Random random = Random();
     
-    puppyImages.add(Image.asset("assets/images/puppy1.jpg"));
-    puppyImages.add(Image.asset("assets/images/puppy2.jpg"));
-    puppyImages.add(Image.asset("assets/images/puppy3.jpg"));
+    puppyImages.add(Image.asset("assets/images/puppies/puppy1.jpg"));
+    puppyImages.add(Image.asset("assets/images/puppies/puppy2.jpg"));
+    puppyImages.add(Image.asset("assets/images/puppies/puppy3.jpg"));
+    puppyImages.add(Image.asset("assets/images/puppies/puppy4.jpg"));
+    puppyImages.add(Image.asset("assets/images/puppies/puppy5.jpg"));
+    puppyImages.add(Image.asset("assets/images/puppies/puppy6.jpg"));
+    puppyImages.add(Image.asset("assets/images/puppies/puppy7.jpg"));
+    puppyImages.add(Image.asset("assets/images/puppies/bulldog_puppy.jpg"));
+    puppyImages.add(Image.asset("assets/images/puppies/bulldog_puppy2.jpg"));
+    puppyImages.add(Image.asset("assets/images/puppies/corgi_puppies.jpg"));
 
     final nextInt = random.nextInt(puppyImages.length);
 
@@ -73,9 +80,12 @@ class HappinessState extends State<Happiness> {
     compliments.add("... for your intellect!");
     compliments.add("... because i can laugh with you!");
     compliments.add("... for the way you move!");
-    compliments.add("... for the nice way you treat everyone you meet!");
+    compliments.add("... for the nice way you treat everyone around you!");
     compliments.add("... for your professional ambition!");
-    compliments.add("... for of your communication skills!");
+    compliments.add("... for your great communication skills!");
+    compliments.add("... for your bad jokes!");
+    compliments.add("... because we can be trash pandas togehter!");
+
 
 
     final nextInt = random.nextInt(compliments.length);
