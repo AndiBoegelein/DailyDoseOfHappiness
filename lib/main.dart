@@ -12,17 +12,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Daily Dose of Happiness',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
+        brightness: Brightness.light,
+        primaryColor: Colors.black,
       ),
+      darkTheme: ThemeData.dark(),
       home: Happiness(),
     );
   }
@@ -33,15 +26,18 @@ class HappinessState extends State<Happiness> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text('Daily Dose of Happiness'),
       ),
+
+      backgroundColor: Colors.black,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Text(
             "I woof u ...",
             style: TextStyle(
-              color: Colors.black,
+              color: Colors.white,
               fontWeight: FontWeight.w800,
               fontFamily: "Robot",
               letterSpacing: 0.5,
@@ -87,7 +83,7 @@ class HappinessState extends State<Happiness> {
     return Text(
       compliments[nextInt],
       style: TextStyle(
-        color: Colors.black,
+        color: Colors.white,
         fontWeight: FontWeight.w800,
         fontFamily: "Robot",
         letterSpacing: 0.5,
