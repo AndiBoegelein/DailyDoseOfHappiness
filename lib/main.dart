@@ -39,7 +39,7 @@ class HappinessState extends State<Happiness> {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Text(
-            "I woof u",
+            "I woof u ...",
             style: TextStyle(
               color: Colors.black,
               fontWeight: FontWeight.w800,
@@ -49,6 +49,7 @@ class HappinessState extends State<Happiness> {
             ),
           ),
           _randomPuppy(),
+          _randomCompliment(),
         ],
       )
     );
@@ -66,7 +67,36 @@ class HappinessState extends State<Happiness> {
 
     return puppyImages[nextInt];
   }
+
+  Widget _randomCompliment() {
+    final List<String> compliments = <String>[];
+    final Random random = Random();
+
+    compliments.add("... because you are awesome!");
+    compliments.add("... for your happy nature!");
+    compliments.add("... for your intellect!");
+    compliments.add("... because i can laugh with you!");
+    compliments.add("... for the way you move!");
+    compliments.add("... for the nice way you treat everyone you meet!");
+    compliments.add("... for your professional ambition!");
+    compliments.add("... for of your communication skills!");
+
+
+    final nextInt = random.nextInt(compliments.length);
+
+    return Text(
+      compliments[nextInt],
+      style: TextStyle(
+        color: Colors.black,
+        fontWeight: FontWeight.w800,
+        fontFamily: "Robot",
+        letterSpacing: 0.5,
+        fontSize: 20,
+      ),
+    );
+  }
 }
+
 
 class Happiness extends StatefulWidget {
   @override
