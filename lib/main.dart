@@ -35,7 +35,9 @@ class HappinessState extends State<Happiness> {
       appBar: AppBar(
         title: Text('Daily Dose of Happiness'),
       ),
-      body: _randomPuppy(),
+      body: Center(
+        child:_randomPuppy(),
+      )
     );
   }
 
