@@ -35,8 +35,21 @@ class HappinessState extends State<Happiness> {
       appBar: AppBar(
         title: Text('Daily Dose of Happiness'),
       ),
-      body: Center(
-        child:_randomPuppy(),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Text(
+            "I woof u",
+            style: TextStyle(
+              color: Colors.black,
+              fontWeight: FontWeight.w800,
+              fontFamily: "Robot",
+              letterSpacing: 0.5,
+              fontSize: 20,
+            ),
+          ),
+          _randomPuppy(),
+        ],
       )
     );
   }
