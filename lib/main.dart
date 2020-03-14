@@ -53,7 +53,7 @@ class HappinessState extends State<Happiness> {
 
   Widget _randomPuppy() {
     final List<Image> puppyImages = <Image>[];
-    final Random random = Random();
+    final random = Random();
 
     puppyImages.add(Image.asset("assets/images/puppies/puppy1.jpg"));
     puppyImages.add(Image.asset("assets/images/puppies/puppy2.jpg"));
@@ -66,14 +66,12 @@ class HappinessState extends State<Happiness> {
     puppyImages.add(Image.asset("assets/images/puppies/bulldog_puppy2.jpg"));
     puppyImages.add(Image.asset("assets/images/puppies/corgi_puppies.jpg"));
 
-    final nextInt = random.nextInt(puppyImages.length);
-
-    return puppyImages[nextInt];
+    return puppyImages[random.nextInt(puppyImages.length)];
   }
 
   Widget _randomCompliment() {
     final List<String> compliments = <String>[];
-    final Random random = Random();
+    final random = Random();
 
     compliments.add("... because you are awesome!");
     compliments.add("... for your happy nature!");
@@ -86,10 +84,8 @@ class HappinessState extends State<Happiness> {
     compliments.add("... for your bad jokes!");
     compliments.add("... because we can be trash pandas togehter!");
 
-    final nextInt = random.nextInt(compliments.length);
-
     return Text(
-      compliments[nextInt],
+      compliments[random.nextInt(compliments.length)],
       style: TextStyle(
         color: Colors.white,
         fontWeight: FontWeight.w800,
