@@ -4,54 +4,42 @@ import 'package:flutter/material.dart';
 import 'package:generatehappiness/main.dart';
 
 class SplashScreen extends StatelessWidget {
-
   static const _animationNameWaveSlow = 'waveSlow';
   static const _animationNameWaveFast = 'waveFast';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
-      body: Column(
-        children: [
-          Flexible(
-            flex: 12,
-            child: FlareActor(
-              'assets/flare/dog_waving.flr',
-              alignment: Alignment.center,
-              fit: BoxFit.contain,
-              animation: _animationNameWaveFast,
-            //child: TransportAnimation(
-            //  type: randomTransportAnimationType(),
-            //  fit: BoxFit.contain,
+        appBar: AppBar(
+          centerTitle: true,
+          title: Text(
+            'Daily Dose of Happiness',
+            style: TextStyle(
+              fontWeight: FontWeight.w800,
+              fontFamily: 'Oswald',
+              letterSpacing: 0.5,
+              fontSize: 20,
             ),
           ),
-          Flexible(
-              flex: 2,
-              child: RaisedButton(
-                color: Colors.white,
-                elevation: 10,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(50)),
-                child: Text(
-                  'Tap me!',
-                  style: TextStyle(
-                    color: Colors.black54,
-                    fontWeight: FontWeight.w800,
-                    fontFamily: 'Oswald',
-                    letterSpacing: 0.5,
-                    fontSize: 20,
-                  ),
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Happiness()),
-                  );
-                },
-              )),
-        ],
-      ),
+          backgroundColor: Colors.orange[700],
+        ),
+        backgroundColor: Colors.black,
+        body:  FlareActor(
+            'assets/flare/dog_waving.flr',
+            alignment: Alignment.center,
+            fit: BoxFit.contain,
+            animation: _animationNameWaveFast,
+        ),
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: Colors.orange[700],
+          child: Icon(Icons.arrow_forward),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Happiness()),
+            );
+          },
+        )
     );
   }
 }

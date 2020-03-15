@@ -37,6 +37,7 @@ class HappinessState extends State<Happiness> {
               fontSize: 20,
             ),
           ),
+          backgroundColor: Colors.orange[700],
         ),
         backgroundColor: Colors.black,
         body: Column(
