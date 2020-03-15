@@ -5,8 +5,8 @@ import 'package:generatehappiness/main.dart';
 
 class SplashScreen extends StatelessWidget {
 
-  static const _animationNameWaveSlow = "waveSlow";
-  static const _animationNameWaveFast = "waveFast";
+  static const _animationNameWaveSlow = 'waveSlow';
+  static const _animationNameWaveFast = 'waveFast';
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class SplashScreen extends StatelessWidget {
           Flexible(
             flex: 12,
             child: FlareActor(
-              "assets/flare/dog_waving.flr",
+              'assets/flare/dog_waving.flr',
               alignment: Alignment.center,
               fit: BoxFit.contain,
               animation: _animationNameWaveFast,
@@ -34,11 +34,11 @@ class SplashScreen extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50)),
                 child: Text(
-                  "Tap me!",
+                  'Tap me!',
                   style: TextStyle(
                     color: Colors.black54,
                     fontWeight: FontWeight.w800,
-                    fontFamily: "Robot",
+                    fontFamily: 'Oswald',
                     letterSpacing: 0.5,
                     fontSize: 20,
                   ),
